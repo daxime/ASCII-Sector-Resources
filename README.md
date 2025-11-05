@@ -7,6 +7,7 @@ The game was developed by Christian Knudsen from Laserbrain Studios.
 
 ⚠️ **If you have created a quest, or if you have quests that are not already listed here, I would be happy to add them to the “Community Quests” folder.**
 
+**The quests currently in "Community Quests (2015).zip"**:
 | A Lady in Trouble | A Lady in Trouble - Part 2 | Halfway Cat-Away |
 | --- | --- | --- |
 | Hitman ASCII Sector | Kilrathi Hunt | Kilrathi Intrusion |
