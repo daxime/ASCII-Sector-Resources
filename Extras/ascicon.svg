@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg1"
+   width="164"
+   height="164"
+   viewBox="0 0 164 164"
+   sodipodi:docname="ascicon.svg"
+   inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)"
+   inkscape:export-filename="ascicon.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="true"
+     inkscape:zoom="1.7730713"
+     inkscape:cx="60.629259"
+     inkscape:cy="113.64461"
+     inkscape:window-width="1384"
+     inkscape:window-height="831"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g1">
+    <inkscape:grid
+       id="grid1"
+       units="px"
+       originx="0"
+       originy="0"
+       spacingx="3.9"
+       spacingy="3.9"
+       empcolor="#0099e5"
+       empopacity="0.30196078"
+       color="#0099e5"
+       opacity="0.14901961"
+       empspacing="6"
+       enabled="false"
+       visible="true" />
+  </sodipodi:namedview>
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="Image"
+     id="g1">
+    <rect
+       style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:3.78317;stroke-linecap:round;stroke-linejoin:round"
+       id="rect1"
+       width="164"
+       height="164"
+       x="0"
+       y="0" />
+    <path
+       style="opacity:1;fill:#5050fe;fill-opacity:1;stroke-width:3.77953;stroke-linecap:round;stroke-linejoin:round"
+       d="M 23.400001,140.4 V 23.400001 H 140.4 V 93.600002 H 70.200002 v -23.4 H 117 l 0,-23.400001 H 46.800001 V 140.4 Z"
+       id="path1"
+       sodipodi:nodetypes="ccccccccccc" />
+  </g>
+</svg>
