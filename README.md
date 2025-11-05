@@ -5,8 +5,10 @@ Welcome to the ASCII Sector resources download mirror. This GitHub repository se
 
 The game was developed by Christian Knudsen from Laserbrain Studios.
 
-⚠️ If you have created a quest, or if you have quests that are not already listed here, I would be happy to add them to the “Community Quests” folder.
+⚠️ **If you have created a quest, or if you have quests that are not already listed here, I would be happy to add them to the “Community Quests” folder.**
+
 | A Lady in Trouble | A Lady in Trouble - Part 2 | Halfway Cat-Away |
+| --- | --- | --- |
 | Hitman ASCII Sector | Kilrathi Hunt | Kilrathi Intrusion |
 | Saturnus in Trouble | Shootout at OK Corral | The Runners |
 
@@ -17,10 +19,11 @@ Start with a simple spaceship, accept missions or trade goods to earn enough mon
 
 With the Ascii Sector scripting language, you can create your own quests for the game or have fun with other player's quests.
 
-Latest version: 0.7.2
-Released: January 22nd, 2016
+**Latest version: 0.7.2**
 
-Latest MS-DOS version : 0.3.1
+**Released: January 22nd, 2016**
+
+***Latest MS-DOS version : 0.3.1***
 
 ![screenshot1](./img/screenshot1.png)
 ![screenshot2](./img/screenshot2.png)
@@ -31,6 +34,6 @@ Latest MS-DOS version : 0.3.1
 ![screenshot7](./img/screenshot7.png)
 
 ## 🔗 Links
-[ASCII Sector](https://www.asciisector.net/)
-[ASCII Sector Wiki](https://asciisector.fandom.com/wiki/Ascii_Sector_Wiki)
-[ASCII Sector Trade Chart](https://github.com/heategn/asciisector_trade_chart)
+* [ASCII Sector](https://www.asciisector.net/)
+* [ASCII Sector Wiki](https://asciisector.fandom.com/wiki/Ascii_Sector_Wiki)
+* [ASCII Sector Trade Chart](https://github.com/heategn/asciisector_trade_chart)
