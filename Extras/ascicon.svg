@@ -4,9 +4,9 @@
 <svg
    version="1.1"
    id="svg1"
-   width="164"
-   height="164"
-   viewBox="0 0 164 164"
+   width="160"
+   height="160"
+   viewBox="0 0 160 160"
    sodipodi:docname="ascicon.svg"
    inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)"
    inkscape:export-filename="ascicon.png"
@@ -28,9 +28,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      showgrid="true"
-     inkscape:zoom="1.7730713"
-     inkscape:cx="60.629259"
-     inkscape:cy="113.64461"
+     inkscape:zoom="3.63125"
+     inkscape:cx="80"
+     inkscape:cy="80"
      inkscape:window-width="1384"
      inkscape:window-height="831"
      inkscape:window-x="0"
@@ -42,13 +42,13 @@
        units="px"
        originx="0"
        originy="0"
-       spacingx="3.9"
-       spacingy="3.9"
+       spacingx="4.1"
+       spacingy="4.1"
        empcolor="#0099e5"
        empopacity="0.30196078"
        color="#0099e5"
        opacity="0.14901961"
-       empspacing="6"
+       empspacing="3"
        enabled="false"
        visible="true" />
   </sodipodi:namedview>
@@ -57,16 +57,16 @@
      inkscape:label="Image"
      id="g1">
     <rect
-       style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:3.78317;stroke-linecap:round;stroke-linejoin:round"
+       style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:3.6909;stroke-linecap:round;stroke-linejoin:round"
        id="rect1"
-       width="164"
-       height="164"
+       width="160"
+       height="160"
        x="0"
        y="0" />
     <path
-       style="opacity:1;fill:#5050fe;fill-opacity:1;stroke-width:3.77953;stroke-linecap:round;stroke-linejoin:round"
-       d="M 23.400001,140.4 V 23.400001 H 140.4 V 93.600002 H 70.200002 v -23.4 H 117 l 0,-23.400001 H 46.800001 V 140.4 Z"
-       id="path1"
+       style="fill:#5050fe;fill-opacity:1;stroke-width:3.77953;stroke-linecap:round;stroke-linejoin:round"
+       d="M 24.599999,135.3 V 24.599999 H 135.3 V 98.399998 H 73.799998 v -24.6 H 110.7 V 49.199999 H 49.199999 V 135.3 Z"
+       id="path1-3"
        sodipodi:nodetypes="ccccccccccc" />
   </g>
 </svg>
