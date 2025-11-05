@@ -5,13 +5,16 @@ Welcome to the ASCII Sector resources download mirror. This GitHub repository se
 
 The game was developed by Christian Knudsen from Laserbrain Studios.
 
-⚠️ **If you have created a quest, or if you have quests that are not already listed here, I would be happy to add them to the “Community Quests” folder.**
+ℹ️ **If you have created a quest, or if you have quests that are not already listed here, I would be happy to add them to the “Community Quests” folder.**
 
 **The quests currently in "Community Quests (2015).zip"**:
 | A Lady in Trouble | A Lady in Trouble - Part 2 | Halfway Cat-Away |
 | --- | --- | --- |
 | Hitman ASCII Sector | Kilrathi Hunt | Kilrathi Intrusion |
 | Saturnus in Trouble | Shootout at OK Corral | The Runners |
+
+
+ℹ️ **For Linux users** : Copy `asciisec.lang` (from Extras folder) in this folder `/usr/share/gtksourceview-5/language-specs/` to enable synthax highlight in GEdit.
 
 ## 🌌 ASCII Sector: The Text-Based Space Adventure
 ASCII Sector is a free game that revives the spirit of legendary combat, trading, and space exploration games such as Elite and Privateer, all wrapped up in a graphical interface made entirely from ASCII art. Yes, all the ships, planets, and characters are made from simple text characters, and it's absolutely beautiful (for those who appreciate minimalist aesthetics!).
