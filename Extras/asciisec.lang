@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+Author: Cthulhu  
+
+If you find this useful, or if you have any questions, suggestions, or feedback, please let me know; you can find me on the forum. If no one uses this highlighting language I might not maintain it. Feel free to edit to your liking.
+
+INSTALLATION PROCEDURE
+______________________
+ simply copy it to: 
+ /usr/share/gtksourceview-2.0/language-specs/
+ 
+ restart gedit, and you will find it as AsciiQuest under "Markings" in the View Menu.
+ 
+ (for those new to Linux:
+ sudo cp -v path/to/this/file/asciisec.lang /usr/share/gtksourceview-2.0/language-specs
+ )
+ 
+ You can also edit the color, by creating a new style "name.xml" and put it in:
+ /usr/share/gtksourceview-2.0/styles/
+ look at the syntax of the already existing files in this folder, but that is just for advanced users.
+
+NEWS
+____
+* Included all the new quest-commands introduced up until v0.6.6.3 (June 2010). 
+* Added "Types", changed color of "Missions".
+* Corrected two errors due to trailing spaces in ship names.
+* Commented out "GiveItem" and "PlaceItemOnBase", since these are obsolete. 
+
+
+SOME NOTES
+__________
+This highlighting language is by default case sensitive. You can remove this by un-commenting the line " <default-regex-options case-sensitive="false"/> ", after the <styles> section below. However, doing this will cause your quest script to become more highlighted in character dialogue. For instance: 
+	Character : You lost the knife and all the credits I gave you!
+will highlight "knife", "all", and "credits" as these are commands (but defined as "Knife", "All", and "Credits" in this document). 
+
+Also, there might be some inconsistencies regarding the color of the markings as many variables can be both to the right and to the left of a ":". For instance: "Variable : name" and "Event : Variable : name".
+
+
+TODO
+____
+I have not included any system names, bases, or cargo types; perhaps I, or someone else, will include them in the future.
+-->
+
+
+
+<language id="quest" _name="AsciiQuest" version="2.0" _section="Markup">
+    <metadata>
+      <property name="mimetypes">text/x-txt</property>
+      <property name="globs">*.txt</property>
+      <property name="line-comment-start">//</property>
+    </metadata>
+
+    <styles>
+        <style id="comment"           _name="Comment"             map-to="def:comment"/>
+        <style id="keyword"           _name="Keyword"             map-to="def:keyword"/>
+        <style id="keywords-end"      _name="Keywords-end"        map-to="def:keyword"/>    
+        <style id="primary"           _name="primary value"       map-to="def:type"/>
+        <style id="secondary"         _name="secondary value"     map-to="def:boolean"/>  
+        <style id="systemnames"       _name="System Names"        map-to="def:special-char"/>  
+        <style id="equipment"         _name="Equipment"           map-to="def:identifier"/>  
+        <style id="end"               _name="End value"           map-to="def:statement"/>
+        <style id="ship"              _name="Ship"                map-to="def:boolean"/>
+        <style id="uline"             _name="Underlined"          map-to="def:underlined"/>
+        <style id="preamble"          _name="Preamble"            map-to="def:error"/> 
+        <style id="characterdialogue" _name="characterdialogue"   map-to="def:preprocessor"/>           
+    </styles>
+
+
+    <!-- LEFT COMMENT DELIMITER
+    <default-regex-options case-sensitive="false"/>
+                                                     RIGHT COMMENT DELIMITER -->
+
+
+    <definitions>
+        <context id="quest">
+            <include>
+
+                <context ref="gtk-doc:inline-docs-section"/>
+
+                <context id="comment" style-ref="comment" end-at-line-end="true">
+                    <start>//</start>
+                    <include>
+                      <context ref="def:in-line-comment"/>
+                    </include>
+                </context>
+
+                <context id="characterdialogue" style-ref="characterdialogue">
+                    <keyword>Character</keyword>
+                    <keyword>Ship</keyword>
+                </context>
+               
+                <context id="ship" style-ref="ship">
+                    <keyword>Gothri</keyword>
+                    <keyword>Dralthi</keyword>
+                    <keyword>Stiletto</keyword>
+                    <keyword>Broadsword</keyword>
+                    <keyword>Galaxy</keyword>
+                    <keyword>Drayman</keyword>
+                    <keyword>Tarsus</keyword>
+                    <keyword>Talon</keyword>
+                    <keyword>Demon</keyword>
+                    <keyword>Orion</keyword>
+                    <keyword>Centurion</keyword>
+                    <keyword>Ulysses</keyword>
+                    <keyword>Nexus</keyword>
+                    <keyword>Pegasus</keyword>
+                    <keyword>Gladius</keyword>
+                    <keyword>Paradigm</keyword>
+                    <keyword>Kamekh</keyword>
+                </context>
+
+                <context id="systemnames" style-ref="systemnames">
+                    <keyword>Basin</keyword>
+                </context>
+                
+                <context id="equipment" style-ref="equipment">
+                    <keyword>M-47 SemiAuto Laser Gun</keyword>
+                    <keyword>M-39 Laser Rifle</keyword>
+                    <keyword>C-244 Pistol</keyword>
+                    <keyword>M-42 Machine Pistol</keyword>
+                    <keyword>C-47 Assault Rifle</keyword>
+                    <keyword>MPR-27 Pulse Gun</keyword>
+                    <keyword>MPR-481 Pulse Rifle</keyword>
+                    <keyword>Knife</keyword>
+                    <keyword>Stunrod</keyword>
+                    <keyword>Vibroblade</keyword>
+                    <keyword>Pepper Spray</keyword>
+                    <keyword>Kevlar Vest</keyword>
+                    <keyword>Titanium Vest</keyword>
+                    <keyword>NanoComp Vest</keyword>
+                    <keyword>Plasteel Helmet</keyword>
+                    <keyword>Hand Grenade</keyword>
+                </context>
+      
+                <context id="end" style-ref="end">
+                    <keyword>QuestDone</keyword>
+                </context>
+                            
+                <context id="preamble" style-ref="preamble">
+                    <keyword>Title</keyword>
+                    <keyword>Author</keyword>
+                    <keyword>Achievement</keyword>
+                </context>
+
+                <!-- Keywords -->
+                <context id="keywords" style-ref="keyword">
+                    <keyword>SCENE</keyword>
+                    <keyword>TRIGGER</keyword>
+                    <keyword>ONLOAD</keyword>
+                    <keyword>MISSION</keyword>
+                    <keyword>CLEARNAV</keyword>
+                    <keyword>SHIP</keyword>
+                    <keyword>SHIPDIALOGUE</keyword>
+                    <keyword>STEP</keyword>
+                    <keyword>CHARACTER</keyword>
+                    <keyword>BARTENDER</keyword>
+                    <keyword>CHARACTERDIALOGUE</keyword>
+                    <keyword>ELSE</keyword>
+                    <keyword>IF</keyword>
+                </context>                 
+
+                 <context id="keywords-end" style-ref="keyword">
+                    <prefix>/</prefix>
+                    <keyword>SCENE</keyword>
+                    <keyword>TRIGGER</keyword>
+                    <keyword>ONLOAD</keyword>
+                    <keyword>MISSION</keyword>
+                    <keyword>CLEARNAV</keyword>
+                    <keyword>SHIPDIALOGUE</keyword>
+                    <keyword>SHIP</keyword>
+                    <keyword>STEP</keyword>
+                    <keyword>CHARACTER</keyword>
+                    <keyword>BARTENDER</keyword>
+                    <keyword>CHARACTERDIALOGUE</keyword>
+                    <keyword>ELSE</keyword>
+                    <keyword>IF</keyword>
+                </context>
+
+                <context id="primary" style-ref="primary">
+ <!--trigger-->     <keyword>Event</keyword>
+                    <keyword>Repeats</keyword>
+                    <keyword>Result</keyword>
+ <!--mission-->     <keyword>Description</keyword>
+                    <keyword>Expiration</keyword>
+                    <keyword>Objective</keyword>
+ <!--bartender-->   <keyword>Exemption</keyword>
+ <!--character-->   <keyword>Color</keyword>		
+                    <keyword>CriticalWounds</keyword>
+                    <keyword>EquipmentHead</keyword>
+                    <keyword>EquipmentLeftBelt</keyword>
+                    <keyword>EquipmentLeftHand</keyword>
+                    <keyword>EquipmentLeftShoulder</keyword>
+                    <keyword>EquipmentRightBelt</keyword>
+                    <keyword>EquipmentRightHand</keyword>
+                    <keyword>EquipmentRightShoulder</keyword>
+                    <keyword>EquipmentTorso</keyword>
+                    <keyword>FirstName</keyword>
+                    <keyword>Faction</keyword>
+                    <keyword>Gender</keyword>
+                    <keyword>HealthHead</keyword>
+                    <keyword>HealthLeftArm</keyword>
+                    <keyword>HealthLeftLeg</keyword>
+                    <keyword>HealthRightArm</keyword>
+                    <keyword>HealthRightLeg</keyword>
+                    <keyword>HealthTorso</keyword>
+                    <keyword>HealthTotal</keyword>
+                    <keyword>HomeName</keyword>
+                    <keyword>HomeType</keyword>
+                    <keyword>LastName</keyword>
+                    <keyword>Movement</keyword>
+                    <keyword>Order</keyword>
+                    <keyword>OrderTarget</keyword>
+                    <keyword>Precision</keyword>
+                    <keyword>Speed</keyword>
+                    <keyword>Strength</keyword>
+                    <keyword>X</keyword>
+                    <keyword>Y</keyword>
+ <!--characterdia--><keyword>ChangeScene</keyword>
+                    <keyword>Goto</keyword>
+                    <keyword>GOTO</keyword>
+                    <keyword>Player</keyword>
+                    <keyword>Reply</keyword>
+                    <keyword>Timer</keyword>
+ <!--onload-->      <keyword>MarkNavPoint</keyword>
+                    <keyword>RemoveMission</keyword>
+                    <keyword>Mission</keyword>
+                    <keyword>RemoveNavPointMark</keyword>
+                    <keyword>Variable</keyword>               
+ <!--ship-->        <keyword>Template</keyword>
+                    <keyword>System</keyword>
+                    <keyword>Shields</keyword>
+                    <keyword>SpawnCharacters</keyword>
+                    <keyword>OrderTarget</keyword>
+                    <keyword>Order</keyword>
+                    <keyword>Nav</keyword>
+                    <keyword>Name</keyword>
+                    <keyword>Morale</keyword>
+                    <keyword>MissileType</keyword>
+                    <keyword>MissileAmount</keyword>
+                    <keyword>GunCooler</keyword>
+                    <keyword>GunBoost</keyword>
+                    <keyword>Gun</keyword>
+                    <keyword>Faction</keyword>
+                    <keyword>Experience</keyword>
+                    <keyword>ECM</keyword>
+                    <keyword>Attitude</keyword>
+                    <keyword>Armor</keyword>
+                    <keyword>Player</keyword>
+                    <keyword>Type</keyword>
+                </context>
+ 
+ 
+                <context id="secondary" style-ref="secondary">
+ <!--character-->   <keyword>Attack</keyword>
+                    <keyword>None</keyword>
+                    <keyword>Protect</keyword>
+                    <keyword>Talk</keyword>
+                    <keyword>Global</keyword>
+                    <keyword>Local</keyword>
+                    <keyword>Male</keyword>
+                    <keyword>Female</keyword>
+                    <keyword>BoardPlayerShip</keyword>
+                    <keyword>BoardDockedShip</keyword>
+                    <keyword>LeavePlayerShip</keyword>
+ <!--characterdia--><keyword>Accept</keyword>
+                    <keyword>Credits</keyword>
+ <!--onload-->      <keyword>Set</keyword>
+                    <keyword>Start</keyword>
+                    <keyword>Stop</keyword>
+ <!--factions-->    <keyword>Confed</keyword>
+                    <keyword>Hunter</keyword>
+                    <keyword>Merchant</keyword>
+                    <keyword>Militia</keyword>
+                    <keyword>Pirate</keyword>
+                    <keyword>Police</keyword>
+                    <keyword>Retro</keyword>
+                    <keyword>Kilrathi</keyword>
+ <!--ship-->        <keyword>TurretRightCooler</keyword>
+                    <keyword>TurretRightBoost </keyword>
+                    <keyword>TurretRight</keyword>
+                    <keyword>TurretRearCooler</keyword>
+                    <keyword>TurretRearBoost,</keyword>
+                    <keyword>TurretRear</keyword>
+                    <keyword>TurretLeftCooler</keyword>
+                    <keyword>TurretLeftBoost</keyword>
+                    <keyword>TurretLeft</keyword>
+                    <keyword>Torp</keyword>
+                    <keyword>Escort1</keyword>
+                    <keyword>Escort2</keyword>
+                    <keyword>Escort3</keyword>
+                    <keyword>Escort4</keyword>
+                    <keyword>Escort5</keyword>
+                    <keyword>Escort6</keyword>
+                    <keyword>Escort7</keyword>
+                    <keyword>Escort8</keyword>
+                    <keyword>Timid</keyword>
+                    <keyword>Tachyon Cannon</keyword>
+                    <keyword>Rookie</keyword>
+                    <keyword>Retro</keyword>
+                    <keyword>Pro</keyword>
+                    <keyword>Plasma Gun</keyword>
+                    <keyword>Pirate</keyword>
+                    <keyword>Particle Cannon</keyword>
+                    <keyword>None</keyword>
+                    <keyword>Neutron Gun</keyword>
+                    <keyword>MoveToNoEngage</keyword>
+                    <keyword>MoveTo</keyword>
+                    <keyword>Militia</keyword>
+                    <keyword>Meson Blaster</keyword>
+                    <keyword>Merchant</keyword>
+                    <keyword>Mass Driver</keyword>
+                    <keyword>Laser</keyword>
+                    <keyword>LandNoEngage</keyword>
+                    <keyword>Land</keyword>
+                    <keyword>Kilrathi</keyword>
+                    <keyword>JumpNoEngage</keyword>
+                    <keyword>Jump</keyword>
+                    <keyword>Ionic Pulse Cannon</keyword>
+                    <keyword>Hunter</keyword>
+                    <keyword>Heat</keyword>
+                    <keyword>Fusion Cannon</keyword>
+                    <keyword>Forf</keyword>
+                    <keyword>Fanatical</keyword>
+                    <keyword>Escort</keyword>
+                    <keyword>Dumb</keyword>
+                    <keyword>DockNoEngage</keyword>
+                    <keyword>DontMove</keyword>
+                    <keyword>Confident</keyword>
+                    <keyword>Confed</keyword>
+                    <keyword>Attack</keyword>
+                    <keyword>Ace</keyword>
+ <!--shipdialogue--><keyword>ShowMessage</keyword>
+                </context>
+                
+
+<!--Event and Result-->                
+                <context id="uline" style-ref="uline">
+                    <keyword>AreaEntered</keyword>
+                    <keyword>Boarded</keyword>
+                    <keyword>CargoBought</keyword>
+                    <keyword>CargoInHold</keyword>
+                    <keyword>CargoSold</keyword>
+                    <keyword>CharacterBlinded</keyword>
+                    <keyword>CharacterHitByPlayer</keyword>
+                    <keyword>CharacterKilled</keyword>
+                    <keyword>CharacterKilledByPlayer</keyword>
+                    <keyword>CharacterOrderCompleted</keyword>
+                    <keyword>CharacterShotByPlayer</keyword>
+                    <keyword>CharacterStunned</keyword>
+                    <keyword>DistanceTo</keyword>
+                    <keyword>Docked</keyword>
+                    <keyword>FactionAttitude</keyword>
+                    <keyword>From</keyword>
+                    <keyword>ItemAcquired</keyword>
+                    <keyword>ItemLost</keyword>
+                    <keyword>Jumped</keyword>
+                    <keyword>Landed</keyword>
+                    <keyword>Launched</keyword>
+                    <keyword>NavVisited</keyword>
+                    <keyword>ShipDestroyed</keyword>
+                    <keyword>ShipDestroyedByPlayer</keyword>
+                    <keyword>ShipHitByPlayer</keyword>
+                    <keyword>ShipIdentified</keyword>
+                    <keyword>ShipOrderCompleted</keyword>
+                    <keyword>To</keyword>
+                    <keyword>All</keyword>
+                    <keyword>ChangeCharacterOrder</keyword>
+                    <keyword>ChangeCharacterOrderTarget</keyword>
+                    <keyword>ChangeScene</keyword>
+                    <keyword>ChangeShipAttitude</keyword>
+                    <keyword>ChangeShipOrder</keyword>
+                    <keyword>ChangeShipOrderTarget</keyword>
+                    <keyword>Completed</keyword>
+                    <keyword>CreateCharacter</keyword>
+                    <keyword>CreateItem</keyword>
+                    <keyword>CreateShip</keyword>
+                    <keyword>Expired</keyword>
+                    <keyword>Failed</keyword>
+                    <keyword>MarkNavPoint</keyword>
+<!--(obsolete replaced     <keyword>PlaceItemOnBase</keyword>  
+ by 'PlaceItem')           <keyword>GiveItem</keyword>          -->
+                    <keyword>PlaceItem</keyword>
+                    <keyword>RemoveCargo</keyword>
+                    <keyword>RemoveCredits</keyword>
+                    <keyword>RemoveItem</keyword>
+                    <keyword>RemoveMission</keyword>
+                    <keyword>RemoveNavPointMark</keyword>
+                    <keyword>RenameItem</keyword>
+                    <keyword>ShowImage</keyword>
+ <!--AreaEntered--> <keyword>Bar</keyword>	
+                    <keyword>Exchange</keyword>	
+                    <keyword>Hotel</keyword>	
+                    <keyword>Main</keyword>	
+                    <keyword>MercenariesGuild</keyword>	
+                    <keyword>MerchantsGuild</keyword>	
+                    <keyword>MerchantsGuild</keyword>
+                </context>             
+
+            </include>
+        </context>
+    </definitions>
+</language>
