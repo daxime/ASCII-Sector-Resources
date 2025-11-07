@@ -32,13 +32,13 @@ With the Ascii Sector scripting language, you can create your own quests for the
 ***Latest MS-DOS version : 0.3.1***
 
 <p width="100%" align="center" style="display: flex;">
-    <img alt="screenshot 1" src="./img/screenshot1.png" width="33%" style="margin: 10px;">
-    <img alt="screenshot 2" src="./img/screenshot2.png" width="33%" style="margin: 10px;">
-    <img alt="screenshot 3" src="./img/screenshot3.png" width="33%" style="margin: 10px;">
-    <img alt="screenshot 4" src="./img/screenshot4.png" width="33%" style="margin: 10px;">
-    <img alt="screenshot 5" src="./img/screenshot5.png" width="33%" style="margin: 10px;">
-    <img alt="screenshot 6" src="./img/screenshot6.png" width="33%" style="margin: 10px;">
-    <img alt="screenshot 7" src="./img/screenshot7.png" width="33%" style="margin: 10px;">
+    <img alt="screenshot 1" src="./img/screenshot1.png" width="40%" style="margin: 10px;">
+    <img alt="screenshot 2" src="./img/screenshot2.png" width="40%" style="margin: 10px;">
+    <img alt="screenshot 3" src="./img/screenshot3.png" width="40%" style="margin: 10px;">
+    <img alt="screenshot 4" src="./img/screenshot4.png" width="40%" style="margin: 10px;">
+    <img alt="screenshot 5" src="./img/screenshot5.png" width="40%" style="margin: 10px;">
+    <img alt="screenshot 6" src="./img/screenshot6.png" width="40%" style="margin: 10px;">
+    <img alt="screenshot 7" src="./img/screenshot7.png" width="40%" style="margin: 10px;">
 </p>
 
 ## 🔗 Links
