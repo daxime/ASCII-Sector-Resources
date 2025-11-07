@@ -1,4 +1,6 @@
-![ASCII Sector logo](./img/logo-transparent.png)
+<p width="100%" align="center" style="display: flex;">
+    <img alt="ASCII Sector logo" src="./img/logo-transparent.png" width="568px" style="margin: 50px;">
+</p>
 
 ## 🪞 ASCII Sector Resources
 Welcome to the ASCII Sector resources download mirror. This GitHub repository serves as a backup for game files and community quests.
@@ -8,10 +10,10 @@ The game was developed by Christian Knudsen from Laserbrain Studios.
 ℹ️ **If you have created a quest, or if you have quests that are not already listed here, I would be happy to add them to the “Community Quests” folder.**
 
 **The quests currently in "Community Quests (2015).zip"**:
-| A Lady in Trouble | A Lady in Trouble - Part 2 | Halfway Cat-Away |
-| --- | --- | --- |
-| Hitman ASCII Sector | Kilrathi Hunt | Kilrathi Intrusion |
-| Saturnus in Trouble | Shootout at OK Corral | The Runners |
+| A Lady in Trouble | A Lady in Trouble - Part 2  | Halfway Cat-Away   |
+| ----------------- | --------------------------- | ------------------ |
+| Hitman ASCII Sector | Kilrathi Hunt             | Kilrathi Intrusion |
+| Saturnus in Trouble | Shootout at OK Corral     | The Runners        |
 
 
 ℹ️ **For Linux users** : Copy `asciisec.lang` (from Extras folder) in this folder `/usr/share/gtksourceview-5/language-specs/` to enable synthax highlight in GEdit.
@@ -29,13 +31,15 @@ With the Ascii Sector scripting language, you can create your own quests for the
 
 ***Latest MS-DOS version : 0.3.1***
 
-![screenshot1](./img/screenshot1.png)
-![screenshot2](./img/screenshot2.png)
-![screenshot3](./img/screenshot3.png)
-![screenshot4](./img/screenshot4.png)
-![screenshot5](./img/screenshot5.png)
-![screenshot6](./img/screenshot6.png)
-![screenshot7](./img/screenshot7.png)
+<p width="100%" align="center" style="display: flex;">
+    <img alt="screenshot 1" src="./img/screenshot1.png" width="33%" style="margin: 10px;">
+    <img alt="screenshot 2" src="./img/screenshot2.png" width="33%" style="margin: 10px;">
+    <img alt="screenshot 3" src="./img/screenshot3.png" width="33%" style="margin: 10px;">
+    <img alt="screenshot 4" src="./img/screenshot4.png" width="33%" style="margin: 10px;">
+    <img alt="screenshot 5" src="./img/screenshot5.png" width="33%" style="margin: 10px;">
+    <img alt="screenshot 6" src="./img/screenshot6.png" width="33%" style="margin: 10px;">
+    <img alt="screenshot 7" src="./img/screenshot7.png" width="33%" style="margin: 10px;">
+</p>
 
 ## 🔗 Links
 * [ASCII Sector](https://www.asciisector.net/)
